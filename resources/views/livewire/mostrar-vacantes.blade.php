@@ -18,7 +18,7 @@
                         class="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Candidatos
                     </a>
-                    <a href="#"
+                    <a href="{{ route('vacantes.edit', $vacante->id) }}"
                         class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 border border-gray-300 rounded-lg hover:text-white hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                         Editar
                     </a>
@@ -29,7 +29,7 @@
                 </div>
             </div>
         @empty
-            <p>No hay vacantes</p>
+            <p class="text-white">No hay vacantes</p>
         @endforelse
     </div>
     <div class="flex justify-center mt-10">
